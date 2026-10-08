@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Scorpio - Forside </title>
+     <link rel="icon" type="image/x-icon" href="Images/FINAL.png">
+
+    <style>
+        *{ /* Må alltid være med */
+            padding: 0px;
+            margin: 0px;
+
+        }
+        body{
+             background-image: url(Images/ja\ utvidet.png);
+
+            background-color: black;
+            background-repeat: no-repeat;
+            background-size:  contain;
+            
+        }
+         #skifter{
+
+            display: none;
+
+
+        }
+        #burger{
+
+            position: absolute;
+            top: 20px;
+            right: 40px;
+
+            cursor: pointer;
+            z-index: 10; /*legger det forran skjermen så det bak står, som et vindu*/
+
+            font-size: 40px;
+            font-weight: bolder;
+            text-shadow: 1px 1px 1px 1px blue;
+
+           color: rgb(243, 189, 136);
+
+            display: none;
+        }
+        #toppfelt{
+            width: 100%; /* 100vw betyr 100 % av skjermen*/
+            height: 100px;
+            background-color: rgb(4, 37, 16);
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            font-size: x-large;
+            font-weight: bold;
+
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+        
+            
+
+        }
+        #linkefelt{
+             width: 100vw; /* 100vw betyr 100 % av skjermen*/
+            height: 50px;
+            background-color: rgb(183, 24, 45);
+            
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-around;
+
+        }
+        #linkefelt a{
+            color: rgb(6, 6, 6);
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            font-size: x-large;
+            font-weight: bold;
+            text-decoration: none;
+
+        }
+        #venstretopp{
+            height: 100px;
+            width: 150px;
+            display: flex;
+            justify-content: center;
+            align-items: center ;
+
+    
+         
+
+        }
+        #hoyretopp{
+            height: 100px;
+            width: 150px;   
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            font-size: 40px;
+            font-weight: bold;
+            color: rgb(243, 189, 136);
+
+        }
+        #midttopp{
+            height: 100px;
+            width: calc(100vw - 200px);
+            color: rgb(243, 189, 136);
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+        }
+        #hovedfelt{
+            width: 80vw;
+            min-height: 600px;
+            background-color: rgba(243, 212, 165, 0.7);
+            margin: auto; /* midtstiller div'en */
+            padding: 20px;
+            font-family: 'Times New Roman', Times, serif;
+            font-size: large;
+
+        }
+        #blokker{
+            display: grid;
+            grid-template-columns: repeat(1, 1fr);
+            gap: 15px;
+            padding: 8px;
+
+            
+
+
+        }
+          .kort{
+            background-color: aliceblue;
+
+
+
+        }
+        .kort h2{
+            text-align: center;
+            font-size: 30px;
+            font-style: oblique;
+
+            
+            padding-bottom: 2px;
+
+
+        }
+        .blo{
+            height: 300px;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+           background-size: cover;
+           background-position: center;
+            font-size: 30px;
+            font-weight: bold;
+
+            
+        }
+        .brazil{
+            background-image: url(Images/brazil.webp);
+        
+
+        }
+        .afrika{
+            background-image: url(Images/Sør\ Afrika.avif);
+
+
+        }
+        .australia{
+            background-image: url(Images/australia\ oppt.jpg);
+
+
+        }
+         .thailand{
+            background-image: url(Images/japan.jpg);
+
+
+        }
+        .costarica{
+            background-image: url(Images/costarica.webp);
+
+        }
+       #meny{
+        position: absolute;
+        top: 100px;
+        width: 100vw;
+        height: 200px;
+        z-index: 1;
+
+        display: flex;
+        flex-direction: column;
+    
+        background-color: rgb(183, 24, 45);
+        
+
+       }
+       #meny a{
+        text-decoration: none;
+        font-size: 45px;
+        margin-bottom: 15px;
+
+        text-align: center;
+        color: black;
+
+
+    
+       }
+       @media screen and (max-width: 798px){
+        #linkefelt{
+            display: none;
+        }
+        #burger{
+            display: flex;
+        }
+        #meny{
+            display: flex;
+
+            transform: translate3d(0,-400px,0);
+            transition-property: all;
+            transition-duration: 1s;
+        }
+
+        #skifter:checked ~ #meny{
+
+             transform: translate3d(0,0,0);
+
+        }
+
+       }
+        
+
+
+    </style>
+</head>     
+<body>
+
+<div id="toppfelt">
+    <input type="checkbox" id="skifter">
+    <label for="skifter" id="burger"><span>&#9776;</span></label>
+   
+    <div id="venstretopp"> <a href="index copy telefon.html"><img src="Images/Skorpio final.png" alt=""height="90px"></a></div>
+    <div id="midttopp"> <h1>SCORPIO</h1></div>
+    <div id="hoyretopp"></div>
+
+  <div id="meny">
+        <a href="prosjekter.html">PROSJEKTER</a>
+        <a href="Reiser copy.html">REISER</a>
+        <a href="omoss.html">OM OSS</a>
+
+    </div>
+
+ </div> 
+
+<div id="hovedfelt">
+
+
+
+    <div id="blokker"> 
+
+         <div class="kort">
+             <h2>BRAZIL</h2>
+              <a class="blo brazil" href="Brazil.html"></a>
+
+         </div>
+
+         <div class="kort">
+             <h2>SØR-AFRIKA</h2>
+             <a class="blo afrika" href="Sorafrika.html"></a>
+
+         </div>
+    
+         <div class="kort">
+             <h2>AUSTRALIA</h2>
+             <a class="blo australia" href="Australia.html"></a>
+
+
+         </div>
+
+    
+         <div class="kort">
+             <h2>THAILAND</h2>
+             <a class="blo thailand" href="Thailand.html"></a>
+             
+
+         </div>
+    
+
+         <div class="kort">
+             <h2>COSTA RICA</h2>
+             <a class="blo costarica" href="CostaRica.html"></a>
+
+
+         </div>
+
+
+    </div> 
+
+</div>
+    
+</body>
+</html>

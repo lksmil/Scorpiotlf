@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Scorpio - Forside </title>
+     <link rel="icon" type="image/x-icon" href="Images/FINAL.png">
+
+    <style>
+        *{ /* Må alltid være med */
+            padding: 0px;
+            margin: 0px;
+        }
+
+        body{
+             background-image: url(Images/ja\ utvidet.png);
+
+            background-color: black;
+            background-repeat: no-repeat;
+            background-size: contain;
+            min-height: 100vh;
+            
+
+
+        }
+         #skifter{
+
+            display: none;
+
+
+        }
+        #burger{
+
+            position: absolute;
+            top: 20px;
+            right: 40px;
+
+            cursor: pointer;
+            z-index: 10; /*legger det forran skjermen så det bak står, som et vindu*/
+
+            font-size: 40px;
+            font-weight: bolder;
+            text-shadow: 1px 1px 1px 1px blue;
+
+           color: rgb(243, 189, 136);
+
+            display: none;
+
+
+        }
+        #toppfelt{
+            width: 100vw; /* 100vw betyr 100 % av skjermen*/
+            height: 100px;
+            background-color: rgb(4, 37, 16);
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            font-size: x-large;
+            font-weight: bold;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        
+            
+
+        }
+        #venstretopp{
+            height: 500px;
+            width: 100px;
+            display: flex;
+            justify-content: center;
+            align-items: center ;
+
+    
+         
+
+        }
+        #hoyretopp{
+            height: 100px;
+            width: 100px;   
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            font-size: 40px;
+            font-weight: bold;
+            color: rgb(243, 189, 136);
+
+        }
+        #midttopp{
+            height: 100px;
+            width: calc(100vw - 200px);
+            color: rgb(243, 189, 136);
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+        }
+        #hovedfelt{
+            width: 80vw;
+            min-height: 600px;
+            background-color: rgba(243, 212, 165, 0.7);
+            margin: auto; /* midtstiller div'en */
+            padding: 20px;
+            font-family: 'Times New Roman', Times, serif;
+            font-size: large;
+
+        }
+       #intro h1{
+        font-size: 65px;
+        margin-bottom: 35px;
+
+        display: flex;
+        text-align: center;
+
+
+       }
+       #informasjon h3{
+        font-size: 30px;
+        margin-bottom: 20px;
+        font-weight: 550;
+
+
+       }
+       #informasjon p{
+        font-size: 25px;
+        margin-bottom: 25px;
+        font-weight: 520;
+
+
+
+       }
+       #mellom{
+        display: grid;
+        justify-content: center;
+        align-items: center;
+
+
+       }
+       #mellom p{
+        text-align: center;
+        font-size: 35px;
+        font-weight: bold;
+        margin-bottom: 10px;
+
+       }
+       #mellom iframe{
+        width: 100%;
+        height: 300px;
+        
+        
+
+
+        padding-bottom: 10px;
+
+       }
+       #hovedbunn{
+        display: flex;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 10px;
+
+        padding-bottom: 10px;
+
+
+
+       }
+       .blo{
+        background-color: rgb(4, 37, 16);
+        height: 110px;
+        width: 130px;
+        
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        text-decoration: none;
+        text-align: center;
+        font-size: 20px;
+        font-weight: bold;
+        color: rgba(255, 255, 255, 0.689);
+
+
+       }
+       #nederst{
+        display: flex;
+        justify-content: center;
+        width: 100%;
+
+
+       }
+       #nederst a{
+        text-decoration: none;
+        color: black;
+        font-size: 30px;
+        font-weight: bold;
+
+       }
+      #meny{
+        position: absolute;
+        top: 100px;
+        width: 100vw;
+        height: 200px;
+        z-index: 1;
+
+        display: flex;
+        flex-direction: column;
+    
+        background-color: rgb(183, 24, 45);
+        
+
+       }
+       #meny a{
+        text-decoration: none;
+        font-size: 45px;
+        margin-bottom: 15px;
+
+        text-align: center;
+        color: black;
+
+
+    
+       }
+       @media screen and (max-width: 798px){
+        #linkefelt{
+            display: none;
+        }
+        #burger{
+            display: flex;
+        }
+        #meny{
+            display: flex;
+
+            transform: translate3d(0,-400px,0);
+            transition-property: all;
+            transition-duration: 1s;
+        }
+
+        #skifter:checked ~ #meny{
+
+             transform: translate3d(0,0,0);
+
+        }
+
+       }
+
+
+
+    </style>
+</head>     
+<body>
+  <div id="toppfelt">
+    <input type="checkbox" id="skifter">
+    <label for="skifter" id="burger"><span>&#9776;</span></label>
+   
+    <div id="venstretopp"> <a href="index.html"><img src="Images/Skorpio final.png" alt=""height="90px"></a></div>
+    <div id="midttopp"> <h1>SCORPIO</h1></div>
+    <div id="hoyretopp"></div>
+
+  <div id="meny">
+        <a href="prosjekter.html">PROSJEKTER</a>
+        <a href="Reiser copy.html">REISER</a>
+        <a href="omoss.html">OM OSS</a>
+
+    </div>
+
+ </div> 
+
+  <div id="linkefelt"> 
+    <a href="prosjekter.html">PROSJEKTER</a>
+    <a href="reiser.html">REISER</a>
+    <a href="omoss.html">OM OSS</a>
+</div>
+
+<div id="hovedfelt">
+    
+    <div id="intro">
+
+        <h1>Ditt neste eventyr kan redde liv!</h1>
+        
+        <div id="informasjon">
+            
+            <h3>Drømmer du om å oppleve verden samtidig som du gjør en reell forskjell?</h3>
+            
+            <p>Vi samler ungdom, studenter og unge voksne som ønsker å bidra til å beskytte skorpioner og andre truede dyr gjennom meningsfulle natur- og bevaringsprosjekter.</p>
+            <p> Hver dag forsvinner leveområder som er avgjørende for dyrenes overlevelse. Når vi beskytter truede arter, bevarer vi også økosystemene de er en del av – noe som er viktig for naturens balanse, biologisk mangfold og fremtidige generasjoner. Derfor samarbeider vi med lokale organisasjoner og samfunn for å skape løsninger som gir varig positiv effekt.</p>
+            <p>Gjennom prosjektene våre planter vi skog, rydder natur, støtter redningsarbeid og bidrar til bevaring av noen av verdens mest sårbare dyrearter. Mange av prosjektene inkluderer frivillige ekspedisjoner, der du kan bli med til land over hele verden og delta i arbeidet ute i felt.</p>
+
+        </div>  
+
+    </div>
+    
+    
+    <div id="mellom">
+
+        <p>Bli med på laget og gjør en forskjell.</p>
+        
+        <iframe
+        src="https://www.youtube.com/embed/eT89nvkYNDM"
+        title="SCORPIO video"
+        height="300px"
+        width="100%"
+        allowfullscreen
+        frameborder="0">
+        
+
+
+        </iframe>
+ 
+    
+    
+    </div>
+
+
+    <div id="hovedbunn">
+
+        <a class="blo" href="https://prove.hkdir.no/samfunnskunnskapsprove/meld-deg-pa-samfunnskunnnskap">Meld deg på</a>
+        <a class="blo" href="https://en.wikipedia.org/wiki/Birda_(app)">Bidragelse</a>
+        <a class="blo" href="https://www.tvaksjonen.no/engasjer-deg/">Engasjer deg</a>
+
+
+    </div>
+
+    <div id="nederst">
+        <a href="https://www.wwf.no/">Har du spørsmål?</a>
+
+    </div>
+
+
+
+</div>
+
+    
+</body>
+</html>
